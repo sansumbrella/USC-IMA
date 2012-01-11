@@ -19,3 +19,4 @@ Three.js: 3d scenes and animation
 	3d scenes, cameras, and whatnot
 Bringing other web content into your canvas/three.js scene
 	this will be the coolest part, still need to sort it
+	maybe google maps as a texture in three.js
