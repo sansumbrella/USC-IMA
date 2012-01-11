@@ -1,1 +1,21 @@
 USC-Web
+
+My work, other people's work on the web
+	time spent alone (destinations): http://timespentalone.com/destinations/
+	arcade fire: http://www.thewildernessdowntown.com/
+	ellie goudling: http://lights.elliegoulding.com/
+	Ryan Alexander: http://notlion.github.com/streetview-stereographic/
+javascript:
+	object literals
+	arrays
+	prototypal inheritance
+	a bit of the DOM
+DOM Storage: local database
+	let people remember things about your project
+	a personal arrangement/simulation settings
+Canvas: simple drawing
+	2d shapes, text, and images
+Three.js: 3d scenes and animation
+	3d scenes, cameras, and whatnot
+Bringing other web content into your canvas/three.js scene
+	this will be the coolest part, still need to sort it
