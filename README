@@ -1,22 +1,97 @@
 USC-Web
 
-My work, other people's work on the web
-	time spent alone (destinations): http://timespentalone.com/destinations/
-	arcade fire: http://www.thewildernessdowntown.com/
-	ellie goudling: http://lights.elliegoulding.com/
-	Ryan Alexander: http://notlion.github.com/streetview-stereographic/
+Jan 24 6—8
+April 24 project presentations
+746 West Adams Blvd, 90089
+2nd floor conference room
+
+Day 1: Introductions
+A discussion of my work, how and why I use web technology, and some exciting ways other people are using web technology.
+	My work
+		time spent alone
+		Drawing Water
+		Self-portrait by a wave
+		IBM Data Wall?
+	Work of others
+		arcade fire: http://www.thewildernessdowntown.com/
+		ellie goudling: http://lights.elliegoulding.com/
+		Ryan Alexander: http://notlion.github.com/streetview-stereographic/
+		Cut the rope: cuttherope.ie
+What is html5?
+	A new (simplified) standard
+		<!doctype html>
+		not totally supported (yes, there are older browsers out there)
+		consider html5 boilerplate
+	Most of the stuff in html4
+		text, image, and form elements
+	New html tags for multimedia
+  	video
+  	audio
+		canvas
+	New html tags for page structure
+		section, article, nav, header, footer
+	New ways of storing data
+		Local databases
+	Some implied technologies (not actually html5)
+		WebGL, WebAudio
+		geolocation
+		newer javascript
+		CSS3 (animation)
+	Resources
+		http://www.html5rocks.com/en/
+		https://developer.mozilla.org/en/HTML/HTML5
+  
+
+Day 2: Doing something with Javascript
+Your working environment:
+	A modern browser: Chrome/Firefox/Safari
+	A text editor: TextMate, SublimeText2, TextWrangler, gEdit, emacs, what-have-you
+	debug console: provided by your browser
 javascript:
+	variables and scope
+		{ things exist where you create them }
 	object literals
-	arrays
-	prototypal inheritance
-	a bit of the DOM
+		{ associating groups of variables }
+	functions
+		{ objects that can take action }
+	a bit of the DOM (getElementById)
+		accessing objects that exist on screen
+	(maybe) prototypal inheritance (Object.create)
+	Resources
+		https://developer.mozilla.org/en/JavaScript
+		http://jquery.com/
+Canvas: a 2d drawing API
+	Drawing a circle
+	Using an image instead of the circle
+	(maybe) Using a video as your image source
+	Animating the circle
+		using mouse position
+		independent motion
+		collision detection with browser window or canvas edge
+	(maybe) create a bookmarklet to deploy the circle on any page
+
+Day 3 (The Hard Stuff)
+WebGL
+	Drawing a triangle
+		Vbo: color, positions
+		Glsl Program: determine how your triangle gets drawn
+	Moving the triangle
+		matrix translate, rotate
+	A spinning cube (would be good to get this far)
+	Resources:
+		http://learningwebgl.com/blog/?page_id=1217
+WebAudio
+	Play a sound with stereo panning (maybe spatial localization).
+	Visualize listener's position and remember their position on return visits.
+	Resources:
+		http://www.html5rocks.com/en/tutorials/webaudio/intro/
 DOM Storage: local database
 	let people remember things about your project
 	a personal arrangement/simulation settings
-Canvas: simple drawing
-	2d shapes, text, and images
+
+Day 4 (Making the hard stuff easier)
 Three.js: 3d scenes and animation
 	3d scenes, cameras, and whatnot
 Bringing other web content into your canvas/three.js scene
-	this will be the coolest part, still need to sort it
 	maybe google maps as a texture in three.js
+Make a music visualizer with three.js
