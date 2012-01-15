@@ -70,28 +70,31 @@ Canvas: a 2d drawing API
 		collision detection with browser window or canvas edge
 	(maybe) create a bookmarklet to deploy the circle on any page
 
-Day 3 (The Hard Stuff)
-WebGL
+Day 3: Audio and Graphics close to the metal
+WebAudio
+	Play sounds with stereo panning.
+	Get spectral data from audio for visualization
+	Resources:
+		http://www.html5rocks.com/en/tutorials/webaudio/intro/
+		https://wiki.mozilla.org/Audio_Data_API
+WebGL (maybe, might stick with canvas for visualizing this audio)
 	Drawing a triangle
 		Vbo: color, positions
 		Glsl Program: determine how your triangle gets drawn
 	Moving the triangle
 		matrix translate, rotate
-	A spinning cube (would be good to get this far)
 	Resources:
 		http://learningwebgl.com/blog/?page_id=1217
-WebAudio
-	Play a sound with stereo panning (maybe spatial localization).
-	Visualize listener's position and remember their position on return visits.
-	Resources:
-		http://www.html5rocks.com/en/tutorials/webaudio/intro/
-DOM Storage: local database
-	let people remember things about your project
-	a personal arrangement/simulation settings
 
-Day 4 (Making the hard stuff easier)
+Day 4 Making a music visualizer with 3.js
 Three.js: 3d scenes and animation
 	3d scenes, cameras, and whatnot
-Bringing other web content into your canvas/three.js scene
-	maybe google maps as a texture in three.js
-Make a music visualizer with three.js
+	make a grid of 3d objects (spheres, cubes, whatever)
+	texture the objects
+	(maybe) manipulate them with a shader
+Bring back our audio player from previous week
+	plug data in to the 3d scene
+Resources
+	http://www.html5rocks.com/en/tutorials/three/intro/
+	http://www.html5rocks.com/en/tutorials/webgl/shaders/
+	https://github.com/mrdoob/three.js
