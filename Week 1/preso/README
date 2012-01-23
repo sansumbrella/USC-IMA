@@ -1,0 +1,47 @@
+Day 1: Introductions
+A discussion of my work, how and why I use web technology, and some exciting ways other people are using web technology.
+	Reasons for using the web
+		distribution
+		access to the network; can engage directly with other content
+		crowd-sourcing
+		exists in someone's home; personal
+	My work
+		time spent alone: timespentalone.com
+		Drawing Water: 
+	Work of others
+		arcade fire: http://www.thewildernessdowntown.com/
+		ellie goudling: http://lights.elliegoulding.com/
+		Ryan Alexander: http://notlion.github.com/streetview-stereographic/
+		Cut the rope: cuttherope.ie
+		Popcorn: popcorn.js
+What is html5?
+	A new (simplified) standard
+		<!doctype html>
+		not totally supported (yes, there are older browsers out there)
+		consider html5 boilerplate
+	Most of the stuff in html4
+		text, image, and form elements
+	New html tags for multimedia
+  		video
+  		audio
+		canvas
+	New html tags for page structure
+		section, article, nav, header, footer
+	New ways of storing data
+		Local databases
+	Some implied technologies (not actually html5)
+		WebGL, WebAudio
+		geolocation
+		newer javascript
+		CSS3 (animation, font-face)
+	How to use this stuff:
+		html document
+		stylesheets
+		javascript
+	Resources
+		http://www.html5rocks.com/en/
+		https://developer.mozilla.org/en/HTML/HTML5
+		http://popcornjs.org/
+		http://www.fontsquirrel.com/fontface/generator
+		http://www.mirovideoconverter.com/
+		http://www.w3.org/TR/CSS2/selector.html
