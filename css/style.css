@@ -1,0 +1,66 @@
+@font-face{
+	font-family:'Thesis';
+	src: url('type/TheSerif-5-Regular.otf') format('opentype');
+/*	src: local(type/);*/
+}
+
+body{
+	font-family:Thesis,Times,serif;
+	background:url('img/tile.png');
+}
+
+header{
+	margin-bottom:2em;
+}
+
+header h2{
+	display:inline;
+	margin-bottom:2em;
+}
+
+nav{ display:inline; margin-left:0.5em;}
+nav ul{ display:inline; }
+nav li{
+	display:inline;
+	list-style:none;
+	margin-left:0.5em;
+}
+nav ul{
+	margin:0;
+	padding:0;
+}
+
+#main{
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	width:960px;
+	margin:0 auto;
+	padding:1em;
+	background:rgb(255,255,255);
+	background:rgba(255,255,255,0.75);
+	position:relative;
+}
+
+#main:hover{
+	background:rgba(255,255,255,0.95);
+}
+
+video{
+	width:500px;
+}
+audio{
+	width:520px;
+}
+
+a{
+	color:#000;
+	text-decoration:underline;
+}
+a:visited{
+	color:#000;
+}
+
+footer{
+	margin-top:3em;
+}
