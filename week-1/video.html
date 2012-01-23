@@ -14,11 +14,17 @@
 			<nav><a href="index.html">Back</a></nav>
 		</header>
 		<h2>Project Documentation</h2>
-		<video id="video" controls>
+		<video controls>
 			<source src='../media/install.theora.ogv'>
 			<source src='../media/install.mov'>
 		</video>
 		<footer>Created by David Wicks for USC IMA 2012</footer>
 	</div>
+	<script>
+		function playVideo(){
+			var video = document.getElementsByTagName('video')[0];
+			video.play();
+		}
+	</script>
 </body>
 </html>

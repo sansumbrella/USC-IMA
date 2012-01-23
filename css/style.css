@@ -1,9 +1,10 @@
+/* Define custom fonts */
 @font-face{
 	font-family:'Thesis';
 	src: url('type/TheSerif-5-Regular.otf') format('opentype');
-/*	src: local(type/);*/
 }
 
+/* Overall settings */
 body{
 	font-family:Thesis,Times,serif;
 	background:url('img/tile.png');
@@ -13,13 +14,17 @@ header{
 	margin-bottom:2em;
 }
 
+/* Navigation */
 header h2{
 	display:inline;
 	margin-bottom:2em;
 }
-
-nav{ display:inline; margin-left:0.5em;}
-nav ul{ display:inline; }
+nav{
+	display:inline; margin-left:0.5em;
+}
+nav ul{
+	display:inline;
+}
 nav li{
 	display:inline;
 	list-style:none;
@@ -29,7 +34,20 @@ nav ul{
 	margin:0;
 	padding:0;
 }
+footer{
+	margin-top:3em;
+}
 
+/* Links */
+a{
+	color:#000;
+	text-decoration:underline;
+}
+a:visited{
+	color:#000;
+}
+
+/* Content */
 #main{
 	-webkit-transition: all 0.25s ease-in-out;
 	-moz-transition: all 0.25s ease-in-out;
@@ -47,20 +65,8 @@ nav ul{
 }
 
 video{
-	width:500px;
+	width:100%;
 }
 audio{
 	width:520px;
-}
-
-a{
-	color:#000;
-	text-decoration:underline;
-}
-a:visited{
-	color:#000;
-}
-
-footer{
-	margin-top:3em;
 }
