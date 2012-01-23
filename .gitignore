@@ -4,3 +4,4 @@ build
 *.xcuserstate
 .svn
 .DS_Store
+media/
