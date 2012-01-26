@@ -1,50 +1,37 @@
-USC-Web
-
-Jan 24 6—8
-April 24 project presentations
-746 West Adams Blvd, 90089
-2nd floor conference room
+USC Web Workshop
 
 Day 1: Introductions
-A discussion of my work, how and why I use web technology, and some exciting ways other people are using web technology.
-	Reasons for using the web
-		distribution
-		access to the network; can engage directly with other content
-		crowd-sourcing
-		exists in someone's home; personal
-	My work
-		time spent alone
-		Drawing Water
-		Self-portrait by a wave
-		IBM Data Wall?
-	Work of others
-		arcade fire: http://www.thewildernessdowntown.com/
-		ellie goudling: http://lights.elliegoulding.com/
-		Ryan Alexander: http://notlion.github.com/streetview-stereographic/
-		Cut the rope: cuttherope.ie
+A discussion of my work, how and why I use web technology, and some exciting ways other people are using web technology. Also, an intro to html, html5, and some associated technologies.
+Links:
+(my work): http://timespentalone.com/
+(also me): http://sansumbrella.com/
+arcade fire: http://www.thewildernessdowntown.com/
+ellie goudling: http://lights.elliegoulding.com/
+Ryan Alexander: http://notlion.github.com/streetview-stereographic/
+
 What is html5?
+	Most of the stuff in html4
+		text, image, and form elements
+	New html tags for multimedia
+		video
+		audio
+		canvas
+	New html tags for page structure
+		section, article, nav, header, footer
 	A new (simplified) standard
 		<!doctype html>
 		not totally supported (yes, there are older browsers out there)
 		consider html5 boilerplate
-	Most of the stuff in html4
-		text, image, and form elements
-	New html tags for multimedia
-  	video
-  	audio
-		canvas
-	New html tags for page structure
-		section, article, nav, header, footer
 	New ways of storing data
 		Local databases
 	Some implied technologies (not actually html5)
 		WebGL, WebAudio
 		geolocation
-		newer javascript
-		CSS3 (animation)
-	Resources
-		http://www.html5rocks.com/en/
+		newer, faster javascript
+		CSS3 (including animation)
+	Good Resources
 		https://developer.mozilla.org/en/HTML/HTML5
+		http://www.html5rocks.com/en/
 		http://popcornjs.org/
   
 
