@@ -1,15 +1,15 @@
 #USC Web Workshop
 
 ##Day 1: Introductions
-###An introduction to my work and the work of others
-Links:
-(my work): http://timespentalone.com/
-(also me): http://sansumbrella.com/
-arcade fire: http://www.thewildernessdowntown.com/
-ellie goudling: http://lights.elliegoulding.com/
-Ryan Alexander: http://notlion.github.com/streetview-stereographic/
+	###An introduction to my work and the work of others
+	Links:
+	(my work): http://timespentalone.com/
+	(also me): http://sansumbrella.com/
+	arcade fire: http://www.thewildernessdowntown.com/
+	ellie goudling: http://lights.elliegoulding.com/
+	Ryan Alexander: http://notlion.github.com/streetview-stereographic/
 
-###An introduction to html5. What is it?
+	###An introduction to html5. What is it?
 	Most of the stuff in html4
 		text, image, and form elements
 	New html tags for multimedia
