@@ -1,38 +1,38 @@
 #USC Web Workshop
 
 ##Day 1: Introductions
-	###An introduction to my work and the work of others
-	Links:
-	(my work): http://timespentalone.com/
-	(also me): http://sansumbrella.com/
-	arcade fire: http://www.thewildernessdowntown.com/
-	ellie goudling: http://lights.elliegoulding.com/
-	Ryan Alexander: http://notlion.github.com/streetview-stereographic/
+	An introduction to my work and the work of others
+		Links:
+		(my work): http://timespentalone.com/
+		(also me): http://sansumbrella.com/
+		arcade fire: http://www.thewildernessdowntown.com/
+		ellie goudling: http://lights.elliegoulding.com/
+		Ryan Alexander: http://notlion.github.com/streetview-stereographic/
 
-	###An introduction to html5. What is it?
-	Most of the stuff in html4
-		text, image, and form elements
-	New html tags for multimedia
-		video
-		audio
-		canvas
-	New html tags for page structure
-		section, article, nav, header, footer
-	A new (simplified) standard
-		<!doctype html>
-		not totally supported (yes, there are older browsers out there)
-		consider html5 boilerplate
-	New ways of storing data
-		Local databases
-	Some implied technologies (not actually html5)
-		WebGL, WebAudio
-		geolocation
-		newer, faster javascript
-		CSS3 (including animation)
-	Good Resources
-		https://developer.mozilla.org/en/HTML/HTML5
-		http://www.html5rocks.com/en/
-		http://popcornjs.org/
+	An introduction to html5. What is it?
+		Most of the stuff in html4
+			text, image, and form elements
+		New html tags for multimedia
+			video
+			audio
+			canvas
+		New html tags for page structure
+			section, article, nav, header, footer
+		A new (simplified) standard
+			<!doctype html>
+			not totally supported (yes, there are older browsers out there)
+			consider html5 boilerplate
+		New ways of storing data
+			Local databases
+		Some implied technologies (not actually html5)
+			WebGL, WebAudio
+			geolocation
+			newer, faster javascript
+			CSS3 (including animation)
+		Good Resources
+			https://developer.mozilla.org/en/HTML/HTML5
+			http://www.html5rocks.com/en/
+			http://popcornjs.org/
   
 
 ##Day 2: Doing something with Javascript
