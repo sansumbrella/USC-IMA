@@ -1,7 +1,7 @@
-USC Web Workshop
+#USC Web Workshop
 
-Day 1: Introductions
-A discussion of my work, how and why I use web technology, and some exciting ways other people are using web technology. Also, an intro to html, html5, and some associated technologies.
+##Day 1: Introductions
+###An introduction to my work and the work of others
 Links:
 (my work): http://timespentalone.com/
 (also me): http://sansumbrella.com/
@@ -9,7 +9,7 @@ arcade fire: http://www.thewildernessdowntown.com/
 ellie goudling: http://lights.elliegoulding.com/
 Ryan Alexander: http://notlion.github.com/streetview-stereographic/
 
-What is html5?
+###An introduction to html5. What is it?
 	Most of the stuff in html4
 		text, image, and form elements
 	New html tags for multimedia
@@ -35,7 +35,7 @@ What is html5?
 		http://popcornjs.org/
   
 
-Day 2: Doing something with Javascript
+##Day 2: Doing something with Javascript
 Your working environment:
 	A modern browser: Chrome/Firefox/Safari
 	A text editor: TextMate, SublimeText2, TextWrangler, gEdit, emacs, what-have-you
@@ -63,7 +63,7 @@ Canvas: a 2d drawing API
 		collision detection with browser window or canvas edge
 	(maybe) create a bookmarklet to deploy the circle on any page
 
-Day 3: Audio and Graphics close to the metal
+##Day 3: Audio and Graphics close to the metal
 WebAudio
 	Play sounds with stereo panning.
 	Get spectral data from audio for visualization
@@ -79,7 +79,7 @@ WebGL (maybe, might stick with canvas for visualizing this audio)
 	Resources:
 		http://learningwebgl.com/blog/?page_id=1217
 
-Day 4 Making a music visualizer with 3.js
+##Day 4 Making a music visualizer with 3.js
 Three.js: 3d scenes and animation
 	3d scenes, cameras, and whatnot
 	make a grid of 3d objects (spheres, cubes, whatever)
