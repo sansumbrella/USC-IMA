@@ -55,8 +55,41 @@ function billow(){
 	context.stroke();
 }
 
+// using an image
+var picturePen = function (){
+	var brush = document.createElement("canvas"),
+			img = new Image(),
+			w = 96,
+			h = 96,
+			r = 0,
+			dr = 0.02;
+	
+	img.onload = function(){
+		brush.width = img.width;
+		brush.height = img.height;
+		var ctx = brush.getContext("2d");
+		pattern = ctx.createPattern(img, 'no-repeat');
+		
+		ctx.beginPath();
+		ctx.arc( img.width/2, img.height/2, img.width/2, 0, Math.PI*2 );
+		ctx.fillStyle = pattern;
+		ctx.fill();
+	}
+	img.src = "img/solarized-trees.jpg";
+	
+	function draw(){
+		context.save();
+		context.translate( mouseX, mouseY);
+		context.rotate(r);
+		context.drawImage(brush, -w/2, -h/2, w, h);
+		context.restore();
+		r = r + dr; // rotate further
+	}
+	return draw;
+}();
+
 // (interactive) bouncy ball
-var bounce = function bounce(){
+var bounce = function (){
 	var x = 0;
 	var y = 0;
 	var px = -5;
