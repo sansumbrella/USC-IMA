@@ -1,7 +1,8 @@
-var context, // a globally-available drawing context for hacking
-		mouseX = 0,
+// some processing-esque global niceties
+var context, // drawing context for hacking
+		mouseX = 0, // cursor position on the context
 		mouseY = 0,
-		mouseDown = false,
+		mouseDown = false, // whether mouse is pressed in context
 		pmouseX = 0,
 		pmouseY = 0;
 
