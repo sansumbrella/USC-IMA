@@ -5,6 +5,7 @@ canvas{
 	border:1px solid black;
 }
 
-#main{
+#main, #main:hover{
 	background:#FFF;
+	
 }
