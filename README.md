@@ -10,6 +10,8 @@
 		Ryan Alexander: http://notlion.github.com/streetview-stereographic/
 
 	An introduction to html5. What is it?
+		Plain text files with a .html extension
+		A bunch of nested <tags> describing the document structure
 		Most of the stuff in html4
 			text, image, and form elements
 		New html tags for multimedia
@@ -38,30 +40,39 @@
 ##Day 2: Doing something with Javascript
 	Your working environment:
 		A modern browser: Chrome/Firefox/Safari
+		Browser console for hacking and debugging
 		A text editor: TextMate, SublimeText2, TextWrangler, gEdit, emacs, what-have-you
-		debug console: provided by your browser
-	javascript:
-		variables and scope
+	Javascript basics:
+		Numbers
+			you can type them in!
+			you can do math: +, -, /, *, %
+		Text (Strings)
+			you can type them in!
+			you can combine them: +
+			you can inspect them: charAt, indexOf
+			you can transform them: toLowerCase, toUpperCase
+		Variables
+			Remembering those numbers and strings
+			Modifying them later
+	Drawing with javascript + html5 canvas:
+		Our canvas lives in a variable
+		Hello, Canvas!
+			Drawing a circle
+	More advanced javascript:
+		Functions
+			variables you can call on to do things
+		Scope and closures
 			{ things exist where you create them }
-		object literals
-			{ associating groups of variables }
-		functions
-			{ objects that can take action }
-		a bit of the DOM (getElementById)
-			accessing objects that exist on screen
-		(maybe) prototypal inheritance (Object.create)
-		Resources
-			https://developer.mozilla.org/en/JavaScript
-			http://jquery.com/
-	Canvas: a 2d drawing API
-		Drawing a circle
-		Using an image instead of the circle
-		(maybe) Using a video as your image source
-		Animating the circle
-			using mouse position
-			independent motion
-			collision detection with browser window or canvas edge
-		(maybe) create a bookmarklet to deploy the circle on any page
+		Objects
+			{ associate groups of variables and functions }
+		Arrays
+			[ list of variables ]
+		Where did those String and Number methods come from?
+			looking at __proto__
+	Resources
+		https://developer.mozilla.org/en/JavaScript
+		http://simon.html5.org/dump/html5-canvas-cheat-sheet.html
+		http://jquery.com/
 
 
 ##Day 3: Audio and Graphics close to the metal
