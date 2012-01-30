@@ -15,3 +15,6 @@ function clamp(value, low, high){
 function lerp(value, begin, end, newBegin, newEnd){
 	return value/(end-begin) * (newEnd-newBegin);
 }
+function colorString(r,g,b){
+	return "rgb(" + r + "," + g + "," + b + ")";
+}
