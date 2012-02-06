@@ -56,6 +56,7 @@ function physicsSim(spec){
 		}
 		
 		for(var i = 0; i < balls.length; ++i){
+			balls[i].move();
 			balls[i].draw();
 		}
 	}
@@ -78,7 +79,7 @@ function physicsSim(spec){
 			spec.x = Math.random() * canvas.width;
 			spec.y = Math.random() * 200;
 			spec.px = spec.x - 5 + Math.random() * 10;
-			spec.radius = Math.ceil( (Math.random() * (Math.random())) * 6 ) * 24;
+			spec.radius = Math.ceil( (Math.random() * (Math.random())) * 8 ) * 12;
 			var gray = Math.floor( (Math.random() * 8 + 1) * 255/10 );
 			spec.style = "rgb(" + gray + "," + gray + "," + gray + ")";
 			balls.push( ball( spec ) );
@@ -160,14 +161,7 @@ function ball(spec){
 			other.shift( ax * p2, ay * p2 );
 		}
 	}
-	
-	// public method
-	that.draw = function (){
-		// draw the ball
-		that.context.fillStyle = style;
-		that.context.beginPath();
-		that.context.arc(x, y, radius, 0, Math.PI*2);
-		that.context.fill();
+	that.move = function (){
 		// move the ball
 		checkGrabbing();
 		if( grabbed ){
@@ -205,6 +199,15 @@ function ball(spec){
 			py = y - dy;
 			px = x - dx;
 		}
+	}
+	
+	// public method
+	that.draw = function (){
+		// draw the ball
+		that.context.fillStyle = style;
+		that.context.beginPath();
+		that.context.arc(x, y, radius, 0, Math.PI*2);
+		that.context.fill();
 	}
 	
 	return that;
