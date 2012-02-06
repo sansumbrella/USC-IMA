@@ -21,6 +21,7 @@ function square(){
 // makes a visualizer
 var visualizer = function (){
 	var that = {},
+			plop,
 			context;
 	
 	function updateCursor(e){
@@ -40,11 +41,13 @@ var visualizer = function (){
 		canvas.onmousedown = function (){ mouseDown=true; };
 		canvas.onmouseup = canvas.onmouseout = function (){ mouseDown=false; };
 		
-		var sound = soundManager.createSound({
+		plop = soundManager.createSound({
 			id:'air',
-			url:'media/air.mp3'
+			url:'media/plop.mp3'
 		});
-		sound.play({from:4000, to:6500});
+		plop.play();
+		
+		loop();
 	}
 	that.draw = function (){
 		
@@ -57,19 +60,6 @@ var visualizer = function (){
 	return that;
 }
 var app = visualizer();
-// This handles the boilerplate for our drawing context,
-// basic mouse interaction, and animation loop
-
-var startAudio = function(){	
-	// gets the mouse coordinates
-	// calls draw at ~60fps
-	function loop(){
-		draw();
-		requestAnimationFrame( loop );
-	}
-	// start our animation
-	requestAnimationFrame( loop );
-}
 
 soundManager.url = "js/";
 soundManager.flashVersion = 9;
