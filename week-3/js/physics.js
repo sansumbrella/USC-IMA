@@ -1,10 +1,3 @@
-// some processing-esque global niceties
-var mouseX = 0, // cursor position on the context
-		mouseY = 0,
-		mouseDown = false, // whether mouse is pressed in context
-		pmouseX = 0,
-		pmouseY = 0;
-
 $(document).ready( function (){
 	var canvas = document.getElementById("canvas");
 	var sim = physicsSim( {canvas:canvas} );
@@ -37,7 +30,7 @@ function physicsSim(spec){
 		canvas.height = document.height;
 		world.ground = canvas.height - 80;
 		world.right = canvas.width;
-	})
+	});
 	
 	function draw(){
 		// clear the background
