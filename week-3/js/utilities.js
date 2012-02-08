@@ -35,7 +35,7 @@ function createCanvas(spec){
 	canvas = document.getElementById("canvas");
 	canvas.width = width;
 	canvas.height = height;
-	context = canvas.getContext("2d")
+	context = canvas.getContext("2d");
 	
 	canvas.onmousedown = function (){ mouseDown=true; };
 	canvas.onmouseup   = canvas.onmouseout = function (){ mouseDown=false; };
