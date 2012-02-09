@@ -29,14 +29,16 @@ var mouseX = 0, // cursor position on the context
 		context;
 
 function createCanvas(spec){
-	var fullscreen = spec.fullscreen || false,
+	var id = spec.id || "canvas",
+			fullscreen = spec.fullscreen || false,
+			callback = spec.onResize || function (){},
 			width = spec.width || 960,
 			height = spec.height || 540;
-	canvas = document.getElementById("canvas");
+	canvas = document.getElementById(id);
 	canvas.width = width;
 	canvas.height = height;
-	context = canvas.getContext("2d")
-	
+	context = canvas.getContext("2d");
+	// get cursor coordinates
 	canvas.onmousedown = function (){ mouseDown=true; };
 	canvas.onmouseup   = canvas.onmouseout = function (){ mouseDown=false; };
 	canvas.onmousemove = function(e){
@@ -45,13 +47,15 @@ function createCanvas(spec){
 		mouseX            = e.pageX - $(canvas).offset().left;
 		mouseY            = e.pageY - $(canvas).offset().top;
 	}
+	// handle window resizing
 	if(fullscreen){
-		$(canvas).appendClass("fullscreen");
-		canvas.width = document.width;
-		canvas.height = document.height;
-		$(window).resize( function(e){
-			canvas.width = document.width;
-			canvas.height = document.height;
-		})
+		$(canvas).addClass("fullscreen");
+		function adjustSize(e){
+			canvas.width = $(document).width();
+			canvas.height = $(document).height();
+			callback();
+		};
+		$(window).resize( adjustSize );
+		adjustSize();
 	}
 }

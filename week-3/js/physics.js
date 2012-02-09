@@ -1,36 +1,19 @@
 $(document).ready( function (){
-	var canvas = document.getElementById("canvas");
-	var sim = physicsSim( {canvas:canvas} );
-
-	soundManager.onready(sim.run);
+	var sim = physicsSim();
+  sim.run();
 });
 
 function physicsSim(spec){
 	var that = {},
-			canvas = spec.canvas || document.createElement("canvas"),
-			context = canvas.getContext("2d"),
 			balls = [],
-			world = { ground:460, left:0, right:940 };
-
-	canvas.width       = document.width;
-	canvas.height      = document.height;
+			world = { ground:0, left:0, right:0 };
+	createCanvas({w:960, h:540, fullscreen:true, onResize:adjustWorld});
 	world.right        = canvas.width;
 	world.ground       = canvas.height - 80;
-	canvas.onmousedown = function (){ mouseDown=true; };
-	canvas.onmouseup   = canvas.onmouseout = function (){ mouseDown=false; };
-	canvas.onmousemove = function(e){
-		pmouseX           = mouseX;
-		pmouseY           = mouseY;
-		mouseX            = e.pageX - $(canvas).offset().left;
-		mouseY            = e.pageY - $(canvas).offset().top;
-	}
-	
-	$(window).resize( function(e){
-		canvas.width = document.width;
-		canvas.height = document.height;
-		world.ground = canvas.height - 80;
+	function adjustWorld(){
 		world.right = canvas.width;
-	});
+		world.ground = canvas.height - 80;
+	}
 	
 	function draw(){
 		// clear the background
@@ -59,15 +42,8 @@ function physicsSim(spec){
 		requestAnimationFrame( loop );
 	}	
 	
-	that.run = function (){
-		var plop = soundManager.createSound({
-			id:'plop',
-			url:'media/plop.mp3' }
-			);
-			
-		var spec = {sound: plop,
-								context: context,
-								world: world };
+	that.run = function (){			
+		var spec = {world: world };
 		for( var i = 0; i < 48; ++i ){
 			spec.x = Math.random() * canvas.width;
 			spec.y = Math.random() * 200;
@@ -79,7 +55,6 @@ function physicsSim(spec){
 		}
 		loop();
 	}
-	that.getCanvas = function (){ return canvas; }
 	
 	return that;
 }
@@ -96,13 +71,8 @@ function ball(spec){
 		  gravity = spec.gravity || 0.75,
 		  grabbed = false,
 			recoil = 1.25,
-			world = spec.world || {ground:100, left:0, right:100},
-			sound = spec.sound || soundManager.getSoundById("plop"),
-			lastPlop = Date.now() - 1000;
-	// public properties
-	that.context = spec.context;
-	that.rightEdge = that.context.canvas.width;
-	
+			world = spec.world || {ground:100, left:0, right:100};
+
 	// check if the mouse should hold the ball
 	// once grabbed, will hold on until mouse is released
 	function checkGrabbing(){
@@ -114,13 +84,6 @@ function ball(spec){
 			grabbed = false;
 		}
 		return grabbed;
-	}
-	
-	function plop(){
-		if( Math.abs( (y - py) + (x - px)) > 8 && Date.now() - lastPlop > 200 ){
-			sound.play();
-			lastPlop = Date.now();
-		}
 	}
 	that.vitals = function(){
 		return {x:x,
@@ -140,7 +103,6 @@ function ball(spec){
 		var r2 = (radius + v.radius) * (radius + v.radius);
 		var dist2 = (dx)*(dx) + (dy)*(dy);
 		if( dist2 < r2 ){
-			plop();
 			var minDist = radius + v.radius;
 			var angle = Math.atan2(dy, dx);
 			var tx = x + Math.cos(angle) * minDist;
@@ -174,19 +136,16 @@ function ball(spec){
 				y = world.ground - radius;
 				dy *= -friction; // reverse energy
 				dx *= friction; // reduce energy
-				plop();
 			}
 			// bounce off left/right walls
 			if( x > world.right - radius ){
 				x = world.right - radius;
 				dx *= -friction; // reverse energy
 				dy *= friction;
-				plop();
 			} else if( x < world.left + radius ){
 				x = world.left + radius;
 				dx *= -friction;
 				dy *= friction;
-				plop();
 			}
 			// store previous positions
 			py = y - dy;
@@ -197,16 +156,11 @@ function ball(spec){
 	// public method
 	that.draw = function (){
 		// draw the ball
-		that.context.fillStyle = style;
-		that.context.beginPath();
-		that.context.arc(x, y, radius, 0, Math.PI*2);
-		that.context.fill();
+		context.fillStyle = style;
+		context.beginPath();
+		context.arc(x, y, radius, 0, Math.PI*2);
+		context.fill();
 	}
 	
 	return that;
 }
-
-// sound manager flags
-soundManager.url = "js/";
-soundManager.flashVersion = 9;
-soundManager.useFlashBlock = false;
