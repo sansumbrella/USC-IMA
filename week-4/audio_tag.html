@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>JS+Canvas Demos</title>
+	
+	<meta name="description" content=""/>
+	<meta name="author" content="David Wicks"/>
+	<link rel="stylesheet" href="css/week-4.css">
+</head>
+<body>
+	<div id="main" role="main">
+		<header>
+			<h1>Javascript Week 4: Sound</h1>
+			<h2>Audio Tag <a href="index.html">Back</a></h2>
+		</header>
+		<!-- an audio tag in the page -->
+		<audio controls>
+			<!-- location of audio file -->
+			<source src="media/nightingale.mp3" type="audio/mpeg"/> <!-- Safari, Chrome, IE9 -->
+			<source src="media/nightingale.ogg" type="audio/ogg"/> <!-- Firefox, Opera, Chrome -->
+			<!-- a note for people with older browsers -->
+			<p>Your browser does not support the audio tag.</p>
+		</audio>
+		<!-- end audio tag -->
+		<footer>Created for USC iMAP 2012</footer>
+	</div>
+	<script src="js/lib/jquery-1.7.0.min.js"></script>
+	<script src="js/audio_tag.js"></script>
+</body>
+</html>
