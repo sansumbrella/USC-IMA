@@ -1,7 +1,7 @@
 /* Define custom fonts */
 @font-face{
-	font-family:'Thesis';
-	src: url('type/TheSerif-5-Regular.otf') format('opentype');
+  font-family:'Thesis';
+  src: url('type/TheSerif-5-Regular.otf') format('opentype');
 }
 
 /* Overall settings */
